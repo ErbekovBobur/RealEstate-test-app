@@ -5,7 +5,6 @@ import {
     One,
     FieldType,
     TypedField,
-    datetime,
     usePreventLeave,
 } from "react-declarative";
 
@@ -89,11 +88,16 @@ const fields: TypedField[] = [
                         focus() { console.log("focus :-)"); },
                         blur() { console.log("blur :-("); },
                         name: 'keyword',
+                        isDisabled({ disabled }) {
+                            return !disabled;
+                        },
                     },
                     {
                         type: FieldType.Checkbox,
                         fieldBottomMargin: "0",
                         title: "Кодовая фраза",
+                        defaultValue: true,
+                        name: 'disabled',
                     },
                 ],
             },

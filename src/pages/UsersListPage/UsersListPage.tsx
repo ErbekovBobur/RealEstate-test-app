@@ -44,14 +44,14 @@ const columns: IColumn[] = [
         headerName: "Фамилия",
         primary: true,
         field: "lastName",
-        width: () => 100,
+        width: () => 200,
     },
     {
         type: ColumnType.Text,
         field: "id",
         headerName: "ID",
         secondary: true,
-        width: () => 50,
+        width: () => 200,
     },
     {
         type: ColumnType.Action,
@@ -109,7 +109,8 @@ export const UsersListPage = () => {
     };
 
     const handleAction = (action: string) => {
-        alert(action);
+        console.log(action);
+
     };
 
     const handleClick = (row: any) => {
